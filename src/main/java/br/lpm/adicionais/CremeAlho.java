@@ -10,7 +10,7 @@ public class CremeAlho extends AdicionalDecorator{
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "Creme de alho (1,50)";
+        return super.getDescricao() + " + Creme de alho (1,50)";
     }
 
     @Override

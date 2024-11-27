@@ -11,7 +11,7 @@ public class OCha extends AdicionalDecorator {
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "O-Cha (3,90)";
+        return super.getDescricao() + " + O-Cha (3,90)";
     }
 
     @Override

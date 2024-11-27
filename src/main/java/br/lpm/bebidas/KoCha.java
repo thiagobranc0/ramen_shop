@@ -11,7 +11,7 @@ public class KoCha extends AdicionalDecorator {
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "Ko-Cha (Gratuito)";
+        return super.getDescricao() + " + Ko-Cha (Gratuito)";
     }
 
     @Override

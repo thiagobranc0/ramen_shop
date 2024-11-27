@@ -10,11 +10,11 @@ public class RamenMedio extends RamenGenerico implements Ramen {
 
     @Override
     public String getDescricao() {
-        return "Ramen medio (12,90)";
+        return "Ramen medio (12,90) proteína: " + super.getProteinaDescricao();
     }
 
     @Override
     public double getPreco() {
-        return 12.90;
+        return 12.90 + super.getProteincaPreco();
     }
 }

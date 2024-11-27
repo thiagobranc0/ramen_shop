@@ -10,7 +10,7 @@ public class Croutons extends AdicionalDecorator {
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "Croutons (2,00)";
+        return super.getDescricao() + " + Croutons (2,00)";
     }
 
     @Override

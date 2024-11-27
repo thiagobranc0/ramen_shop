@@ -10,7 +10,7 @@ public class ProteinaExtra extends AdicionalDecorator {
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "Proteína extra (4,00)";
+        return super.getDescricao() + " + Proteína extra (4,00)";
     }
 
     @Override

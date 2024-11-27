@@ -10,7 +10,7 @@ public class RamenGrande extends RamenGenerico implements Ramen {
 
     @Override
     public String getDescricao() {
-        return "Ramen Grande (15,90) " + super.getProteinaDescricao();
+        return "Ramen Grande (15,90) proteína: " + super.getProteinaDescricao();
     }
 
     @Override

@@ -11,7 +11,7 @@ public class Refrigerante extends AdicionalDecorator {
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "Refrigerante (5,90)";
+        return super.getDescricao() + " + Refrigerante (5,90)";
     }
 
     @Override

@@ -10,7 +10,7 @@ public class Tofu extends AdicionalDecorator{
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "Tofu (2,70)";
+        return super.getDescricao() + " + Tofu (2,70)";
     }
 
     @Override

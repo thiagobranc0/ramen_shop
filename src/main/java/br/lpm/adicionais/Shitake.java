@@ -10,7 +10,7 @@ public class Shitake extends AdicionalDecorator{
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "Shitake (6,90)";
+        return super.getDescricao() + " + Shitake (6,90)";
     }
 
     @Override

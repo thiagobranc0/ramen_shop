@@ -10,7 +10,7 @@ public class Chilli extends AdicionalDecorator{
 
     @Override
     public String getDescricao() {
-        return super.getDescricao() + "Chilli (2,50)";
+        return super.getDescricao() + " + Chilli (2,50)";
     }
 
     @Override
