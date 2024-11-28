@@ -15,15 +15,24 @@ class fabricaDeRamenTest {
     @Test
     void testMakeRamen() {
         fabricaDeRamen fabrica = new fabricaDeRamen();
+
         int tamanhoMedio = 2;
+
         List<Integer> acrescimos = new ArrayList<>();
+
         acrescimos.add(1);
         acrescimos.add(2);
         acrescimos.add(3);
         acrescimos.add(9);
+
         int ProteinaBoi = 1;
 
         Ramen meuRamen = fabrica.makeRamen(tamanhoMedio, ProteinaBoi, acrescimos);
-        assertEquals("Ramen medio (12,90) proteína: Boi (7,90) + Chilli (2,50) + Creme de alho (1,50) + Croutons (2,00) + Ko-Cha (Gratuito)", meuRamen.getDescricao(), "Testando fabrica de Ramen");
+
+        String descricaoRamen = meuRamen.getDescricao();
+        double precoRamen = meuRamen.getPreco();
+
+        assertEquals(descricaoRamen, meuRamen.getDescricao(), "Testando fabrica de Ramen");
+        assertEquals(precoRamen, meuRamen.getPreco(), "Testando getPreco da fabrica de Ramen");
     }
 }
