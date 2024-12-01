@@ -5,7 +5,7 @@ public abstract class Observer {
 
     public Observer(Observable observable) {
         this.setObservable(observable);
-        this.observable.attach(this);
+        this.observable.setObserver(this);
     }
 
     public Observable getObservable() {
@@ -13,7 +13,9 @@ public abstract class Observer {
     }
 
     public void setObservable(Observable observable) {
-        this.observable = observable;
+        if(observable != null) {
+            this.observable = observable;
+        }
     }
 
 

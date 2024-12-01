@@ -1,14 +1,7 @@
 package br.lpm.notificacao;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Observable {
-    private List<Observer> observers = new ArrayList<Observer>();
-
-    public Observable() {
-        this.setState(Pedido.PENDENTE);
-    }
+    private Observer observer;
 
     private int state;
 
@@ -17,20 +10,24 @@ public abstract class Observable {
     }
 
     public void setState(int state) {
-        this.state = state;
-        this.updateAll();
+        if(this.state != state){
+            this.state = state;
+            this.updateObserver();
+        }
     }
 
-    public void attach(Observer observer) {
-        observers.add(observer);
+    public void setObserver(Observer observer) {
+        if (observer != null) {
+            this.observer = observer;
+        }
     }
 
-    public void detach(Observer observer) {
-        observers.remove(observer);
+    public Observer getObserver() {
+        return observer;
     }
 
-    public void updateAll() {
-        for (Observer observer : observers) {
+    public void updateObserver() {
+        if (observer != null) {
             observer.update();
         }
     }

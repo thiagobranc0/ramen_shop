@@ -12,7 +12,7 @@ public class Pedido extends Observable {
     private Long id;
 
     public Pedido(Ramen ramen) {
-        super();
+        this.setState(PENDENTE);
         this.setRamen(ramen);
     }
 

@@ -3,7 +3,7 @@ package br.lpm.notificacao;
 public class Cliente extends Observer {
     private String nome;
 
-    public Cliente(Observable observable) {
+    public Cliente(String nome, Observable observable) {
         super(observable);
         this.setNome(nome);
     }
@@ -13,7 +13,9 @@ public class Cliente extends Observer {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (nome != null) {
+            this.nome = nome;
+        }
     }
 
     @Override
@@ -26,7 +28,6 @@ public class Cliente extends Observer {
         }
         if(super.getObservable().getState() == 2) {
             System.out.println("Pedido retirado: " + this.getNome());
-            super.getObservable().detach(this);
         }
     }
 }
