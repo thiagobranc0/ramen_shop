@@ -9,11 +9,12 @@ public abstract class Observable {
         return state;
     }
 
-    public void setState(int state) {
+    public String setState(int state) {
         if(this.state != state){
             this.state = state;
-            this.updateObserver();
+            return this.updateObserver();
         }
+        return null;
     }
 
     public void setObserver(Observer observer) {
@@ -26,10 +27,11 @@ public abstract class Observable {
         return observer;
     }
 
-    public void updateObserver() {
+    public String updateObserver() {
         if (observer != null) {
-            observer.update();
+            return observer.update();
         }
+        return null;
     }
 
 }

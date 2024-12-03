@@ -18,7 +18,7 @@ class ObserverTest {
     Cliente cliente = new Cliente(nome, pedido1);
 
     @Test
-    void setObservable() {
+    void testSetObservable() {
         Ramen meuRamen2 = new RamenGrande(vegano);
         Observable pedido2 = new Pedido(meuRamen2);
         cliente.setObservable(pedido2);

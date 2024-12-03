@@ -27,7 +27,7 @@ class ClienteTest {
 
 
     @Test
-    void setNome() {
+    void testSetNome() {
         String novoNome = "Thiago";
         cliente.setNome(novoNome);
         assertEquals(novoNome, cliente.getNome(), "Testando set nome de cliente");
@@ -36,9 +36,8 @@ class ClienteTest {
     }
 
     @Test
-    void update() {
-        cliente.update();
-//        novoPedido.setState(2);
-//        cliente.update();
+    void testUpdate() {
+        String updateMessage = cliente.update();
+        assertEquals(updateMessage, cliente.update(), "Testando update de cliente");
     }
 }

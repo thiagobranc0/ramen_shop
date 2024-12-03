@@ -8,8 +8,7 @@ public class Pedido extends Observable {
     public static final int RETIRADO = 2;
 
     private Ramen ramen;
-    private int count = 0;
-    private Long id;
+    private int id;
 
     public Pedido(Ramen ramen) {
         this.setState(PENDENTE);
@@ -21,22 +20,19 @@ public class Pedido extends Observable {
     }
 
     public void setRamen(Ramen ramen) {
-        this.ramen = ramen;
+        if (ramen != null) {
+            this.ramen = ramen;
+        }
     }
 
-    public int getCount() {
-        return count;
-    }
 
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(int id) {
+        if(id >= 0) {
+            this.id = id;
+        }
     }
 }

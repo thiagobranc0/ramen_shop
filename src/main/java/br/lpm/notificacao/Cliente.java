@@ -19,15 +19,16 @@ public class Cliente extends Observer {
     }
 
     @Override
-    public void update() {
+    public String update() {
         if(super.getObservable().getState() == 0) {
-            System.out.println("Pedido pendente: " + this.getNome());
+            return "Pedido pendente: " + this.getNome();
         }
         if(super.getObservable().getState() == 1) {
-            System.out.println("Pedido pronto: " + this.getNome());
+            return "Pedido pronto: " + this.getNome();
         }
         if(super.getObservable().getState() == 2) {
-            System.out.println("Pedido retirado: " + this.getNome());
+            return "Pedido retirado: " + this.getNome();
         }
+        return null;
     }
 }
