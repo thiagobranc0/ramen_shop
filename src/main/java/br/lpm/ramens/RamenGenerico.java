@@ -24,6 +24,4 @@ public abstract class RamenGenerico {
     public String getProteinaDescricao() {
         return proteina.getDescricao();
     }
-
-
 }

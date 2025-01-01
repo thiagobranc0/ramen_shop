@@ -15,7 +15,11 @@ import br.lpm.ramens.RamenPequeno;
 
 import java.util.List;
 
-public class fabricaDeRamen {
+public class FabricaDeRamen {
+
+    public FabricaDeRamen() {
+    }
+
     public Ramen makeRamen(int tamanho, int proteina, List<Integer> acrescimos) {
         Proteina novaProteina = null;
 

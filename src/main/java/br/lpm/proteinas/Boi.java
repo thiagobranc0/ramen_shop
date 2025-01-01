@@ -1,6 +1,9 @@
 package br.lpm.proteinas;
 
 public class Boi implements Proteina {
+    public Boi() {
+    }
+
     @Override
     public String getDescricao() {
         return "Boi (7,90)";

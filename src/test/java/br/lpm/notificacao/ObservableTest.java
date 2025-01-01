@@ -37,7 +37,7 @@ class ObservableTest {
 
     @Test
     void testSetState() {
-        int estadoPedido = Pedido.PRONTO;
+        Estado estadoPedido = Estado.PRONTO;
         String updateMessage = "Pedido pronto: Thiago";
         assertEquals(updateMessage, pedido1.setState(estadoPedido), "Testando setState do pedido");
         updateMessage = pedido1.setState(estadoPedido);

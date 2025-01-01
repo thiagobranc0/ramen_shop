@@ -1,7 +1,6 @@
 package br.lpm.fabrica;
 
 import br.lpm.ramens.Ramen;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,12 +8,12 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class fabricaDeRamenTest {
+class FabricaDeRamenTest {
 
 
     @Test
     void testMakeRamen() {
-        fabricaDeRamen fabrica = new fabricaDeRamen();
+        FabricaDeRamen fabrica = new FabricaDeRamen();
 
         int tamanhoMedio = 2;
 

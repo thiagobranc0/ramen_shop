@@ -1,6 +1,9 @@
 package br.lpm.proteinas;
 
 public class Vegano implements Proteina {
+    public Vegano() {
+    }
+
     @Override
     public String getDescricao() {
         return "Vegano (3,90)";

@@ -3,15 +3,13 @@ package br.lpm.notificacao;
 import br.lpm.ramens.Ramen;
 
 public class Pedido extends Observable {
-    public static final int PENDENTE = 0;
-    public static final int PRONTO = 1;
-    public static final int RETIRADO = 2;
 
     private Ramen ramen;
     private int id;
 
     public Pedido(Ramen ramen) {
-        this.setState(PENDENTE);
+        super();
+        this.setState(Estado.PREPARANDO);
         this.setRamen(ramen);
     }
 
@@ -34,5 +32,15 @@ public class Pedido extends Observable {
         if(id >= 0) {
             this.id = id;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "id=" + id +
+                ", ramen=" + ramen.getDescricao() +
+                ", preco=" + ramen.getPreco() +
+                ", estado=" + super.updateObserver() +
+                '}';
     }
 }

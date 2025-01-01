@@ -3,13 +3,16 @@ package br.lpm.notificacao;
 public abstract class Observable {
     private Observer observer;
 
-    private int state;
+    private Estado state;
 
-    public int getState() {
+    public Observable() {
+    }
+
+    public Estado getState() {
         return state;
     }
 
-    public String setState(int state) {
+    public String setState(Estado state) {
         if(this.state != state){
             this.state = state;
             return this.updateObserver();
@@ -33,5 +36,4 @@ public abstract class Observable {
         }
         return null;
     }
-
 }

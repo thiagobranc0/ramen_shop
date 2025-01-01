@@ -20,15 +20,22 @@ public class Cliente extends Observer {
 
     @Override
     public String update() {
-        if(super.getObservable().getState() == 0) {
-            return "Pedido pendente: " + this.getNome();
+        if(super.getObservable().getState().equals(Estado.PREPARANDO)) {
+            return "Pedido de " + this.getNome() + " em preparo.";
         }
-        if(super.getObservable().getState() == 1) {
-            return "Pedido pronto: " + this.getNome();
+        if(super.getObservable().getState().equals(Estado.PRONTO)) {
+            return "Pedido de " + this.getNome() + " pronto.";
         }
-        if(super.getObservable().getState() == 2) {
-            return "Pedido retirado: " + this.getNome();
+        if(super.getObservable().getState().equals(Estado.RETIRADO)) {
+            return "Pedido de " + this.getNome() + " retirado.";
         }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome +
+                '}';
     }
 }
